@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block 'cont' %}
+
+    
+    <!-- Password Reset Section -->
+    <section class="password-reset">
+        <!-- <i class="fa-solid fa-envelope"></i> -->
+        <h1>Our Services</h1>
+
+
+   
+    </section>
+
+
+  <!-- Header section -->
+  <!-- <header >
+    <h1>Our WiFi Rental Services</h1>
+    <p>Fast, reliable, and affordable internet With In the specific range that is 10 meter</p>
+</header> -->
+
+<!-- Main content -->
+<div class="container">
+     <h2 class="section-title">What We Offer</h2>
+
+    <div class="service-section">
+       
+
+
+
+    {% for n in serviceNow1 %}
+        <!-- Service 1 -->
+        <div class="service-box">
+            <img src="{{n.Our_image.url}}" alt="Portablen WiFi Icon">
+            <h3>{{n.servicesTitle}}</h3>
+            <p>{{n.serviceDesc}}</p>
+            <!-- <p>{{n.Descritionval}}</p> -->
+            
+        </div>
+    {% endfor  %}
+
+        <!-- Service 2 -->
+        <div class="service-box">
+            <img src="https://via.placeholder.com/100" alt="Global Coverage Icon">
+            <h3>Global Coverage</h3>
+            <p>Connect to the internet in over 100+ countries with seamless global coverage.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-box">
+            <img src="https://via.placeholder.com/100" alt="Flexible Plans Icon">
+            <h3>Flexible Rental Plans</h3>
+            <p>Choose from daily, weekly, or monthly rental options that fit your Internet needs.</p>
+        </div>
+          <!-- Service 4-->
+          <div class="service-box">
+            <img src="https://via.placeholder.com/100" alt="Portable WiFi Icon">
+            <h3>Anonymous Browsing VPN</h3>
+            <p>Data Protection with Anonymous Browsing VPN.</p>
+            <div class="content">
+                <!-- Hidden content that will be revealed -->
+                      <div id="moreContent" class="more-content">
+                          <p>
+                              A postpaid network connection refers to a type of mobile network service where users are 
+                              billed at the end of each billing cycle (usually monthly) based on their usage. Unlike
+                               prepaid plans, where users pay upfront for a certain amount of data, calls, or texts,
+                                postpaid plans allow users to consume services and pay for them after the fact. 
+      <br>
+                              Users pay for the service after using it. Payment methods include:
+      
+                              Direct debit
+                              Bank transfer
+                              Credit or debit card payments
+                              Online payment portals
+                          
+                          If users exceed their allocated data or talk time, they are typically charged at a standard 
+                          </p>
+                      </div>
+              
+                      <!-- Read More button -->
+                      <button id="readMoreBtn" class="read-more-btn" onclick="toggleContent()">Read More</button>
+                  </div>
+
+        </div>
+            <!-- Service 5-->
+            <div class="service-box">
+                <img src="https://via.placeholder.com/100" alt="Portable WiFi Icon">
+                <h3>Data Services</h3>
+                <p>Data Protection with Anonymous Browsing VPN.</p>
+                <div class="content">
+              <!-- Hidden content that will be revealed -->
+                    <div id="moreContent" class="more-content">
+                        <p>
+                            A postpaid network connection refers to a type of mobile network service where users are 
+                            billed at the end of each billing cycle (usually monthly) based on their usage. Unlike
+                             prepaid plans, where users pay upfront for a certain amount of data, calls, or texts,
+                              postpaid plans allow users to consume services and pay for them after the fact. 
+    <br>
+                            Users pay for the service after using it. Payment methods include:
+    
+                            Direct debit
+                            Bank transfer
+                            Credit or debit card payments
+                            Online payment portals
+                        
+                        If users exceed their allocated data or talk time, they are typically charged at a standard 
+                        </p>
+                    </div>
+            
+                    <!-- Read More button -->
+                    <button id="readMoreBtn" class="read-more-btn" onclick="toggleContent()">Read More</button>
+                </div>
+    
+            </div>
+                <!-- Service 6-->
+          <div class="service-box">
+            <img src="https://via.placeholder.com/100" alt="Portable WiFi Icon">
+            <h3>Postpaid Network connection</h3>
+    
+            <div class="content">
+                <p>
+                    Data Protection with Anonymous Browsing VPN
+                </p>
+        
+                <!-- Hidden content that will be revealed -->
+                <div id="moreContent" class="more-content">
+                    <p>
+                        A postpaid network connection refers to a type of mobile network service where users are 
+                        billed at the end of each billing cycle (usually monthly) based on their usage. Unlike
+                         prepaid plans, where users pay upfront for a certain amount of data, calls, or texts,
+                          postpaid plans allow users to consume services and pay for them after the fact. 
+<br>
+                        Users pay for the service after using it. Payment methods include:
+
+                        Direct debit
+                        Bank transfer
+                        Credit or debit card payments
+                        Online payment portals
+                    
+                    If users exceed their allocated data or talk time, they are typically charged at a standard 
+                    </p>
+                </div>
+        
+                <!-- Read More button -->
+                <button id="readMoreBtn" class="read-more-btn" onclick="toggleContent()">Read More</button>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+    {% endblock %}
