@@ -1,0 +1,7 @@
+Django>=4.2,<5.0
+gunicorn
+psycopg2-binary   # if you use PostgreSQL
+dj-database-url   # helpful for database config
+whitenoise        # for serving static files
+djangorestframework
+django-cors-headers
