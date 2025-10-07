@@ -1,0 +1,65 @@
+{% extends 'base.html' %} 
+{%load static %} 
+{% block 'cont' %}
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>
+        For any pament related issue please contact and email to are contact
+        page section will contact with in 24 hours and resolve the issue as soon
+        as possible.
+      </p>
+      <ul class="info">
+        <li>
+          <span class="icon">📍</span>
+          <div>
+            <h4>Address</h4>
+            <p>
+              sanjay nagar sundar baug <br />
+              kamani kurla Mumbai 400070
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="icon">📞</span>
+          <div>
+            <h4>Phone</h4>
+            <p>02210991099</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon">✉️</span>
+          <div>
+            <h4>Email : {{nameFirst}}</h4>
+            <p>b4beautywithglow@gmail.com</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="contact-form">
+      <h3>Send Message</h3>
+      <form  method="post" action="{% url 'saveenquiry' %}" >
+       {% csrf_token %}
+        <div class="inputBox">
+          <input type="text"  id="name"  name='name' placeholder="Your name...." />
+          <input type="email" id="emailid" name='email' placeholder="Your Email....." />
+          <textarea
+            name='msgContent'
+            id="msgContent"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          >
+    
+        {{usesName}}  
+       
+        </textarea>
+          <input type="submit"  class="btn" />
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block 'cont' %}
+
+
+
+    <!-- Password Reset Section -->
+    <section class="password-reset">
+        <h3>Rent the Wifi for days, months,and Half years</h3>
+        <p>Feel free to contact Us any time for the query related to our services</p>
+    </section>
+
+
+<!-- Card -->
+ 
+<b class="Cardtitle"><p>Our Plans</p></b>
+
+    <!-- Toggle Buttons -->
+    <div class="toggle-buttons">
+        <button class="active">Prepaid</button>
+        <button>Prepaid</button>
+    </div>
+
+    <!-- Pricing Cards Section -->
+    <div class="pricing-cards">
+{% for prices in rechargePlanPrice1%}
+        <!-- Card 1 -->
+        <div class="pricing-card">
+            <span class="price">₹{{prices.planPrice}}</span><span class="gst">+GST</span>
+            <p>{{prices.planValidity}}</p>
+            <div class="icons">
+          <span>{{prices.planStar}}Star</span>
+            </div>
+            <hr>
+            <div class="data-info">
+                <div>
+                    <strong>Validity</strong><br>{{prices.ValidityDescription}}
+                </div>
+                <div>
+                    <strong>Data</strong><br>{{prices.planData}}
+                </div>
+            </div>
+            <div class="btn">
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" 
+                    data-payment_button_id="{{prices.planApi}}" async> </script> </form>
+                <span class="view-details">View details</span>
+            </div>
+        </div>
+
+        {% endfor %}
+
+        <!-- Card 2 (Popular Plan) -->
+        <div class="pricing-card">
+            <div style="background-color: #0052cc; color: white; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+                Popular Plan
+            </div>
+            
+            <span class="price">₹549</span><span class="gst">+GST</span>
+            <p>3 months plans available for new customers</p>
+            <div class="icons">
+                
+                <span>5 Star</span>
+            </div>
+            <hr>
+            <div class="data-info">
+                <div>
+                    <strong>Validity</strong><br>90 Days Bill Cycle
+                </div>
+                <div>
+                    <strong>Data</strong><br>Unlimited Data @15 Mbps
+                </div>
+            </div>
+            <div class="btn">
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" 
+                    data-payment_button_id="pl_Pfo3kWqU11aGZB" async> </script> </form>
+                <span class="view-details">View details</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pricing-card">
+            <div style="background-color: #0052cc; color: white; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+                Unlimited Data @20 Mbps
+            </div>
+            <span class="price">₹1089</span><span class="gst">+GST</span>
+            <p>6 months plans available for new customers</p>
+            <div class="icons">
+         
+                <span>5 Star</span>
+            </div>
+            <hr>
+            <div class="data-info">
+                <div>
+                    <strong>Validity</strong><br>180 Days Bill Cycle
+                </div>
+                <div>
+                    <strong>Data</strong><br>Unlimited Data @20 Mbps
+                </div>
+            </div>
+            <div class="btn">
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js"
+                     data-payment_button_id="pl_PfoFqKWUMtzLY6" async> </script> </form>
+                <span class="view-details">View details</span>
+            </div>
+        </div>
+
+    </div>
+
+<div class="space-bar">
+    <pre>
+
+    </pre>
+</div>
+   
+{% endblock %}
