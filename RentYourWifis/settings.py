@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Prices',
     'ourServiceDetail',
-    'tinymce',
+   
     'collectdata',
     'rechargePlans',
 ]
