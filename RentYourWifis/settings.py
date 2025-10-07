@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=9%bi9b$q*6x2n^ad6u9qpo7qgqdoqho0z-xy5w^jdn116+(e9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ["https://django101-bsue.onrender.com"]
 
 
 # Application definition
@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.runserver_nostatic",
 ]
 
 ROOT_URLCONF = 'RentYourWifis.urls'
@@ -129,6 +130,7 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATICFILES_DIRS = [
     BASE_DIR , 'static'
     ]
@@ -138,3 +140,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
